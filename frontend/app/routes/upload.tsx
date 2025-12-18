@@ -125,14 +125,14 @@ const sendFeedback = async (correct: boolean) => {
   setTimeout(() => {
     if (correct) {
       setFeedbackMessage(
-        "Odpoveď bola zaznamená ako správna.\nZáznam sa pridal do rady."
+        "Answer was set as True. Sample was added to database with the correct label."
       );
     } else {
       setFeedbackMessage(
-        "Odpoveď bola označenaá ako nesprávna.\nZáznam sa odstánil"
+        "Answer was set as False. Sample was removed from queue"
       );
     }
-  }, 1200);
+  }, 1000);
 };
 
 
@@ -212,7 +212,7 @@ const sendFeedback = async (correct: boolean) => {
             </div>
 
             <p className="mt-3 text-center text-xs tracking-wide uppercase text-gray-500 dark:text-gray-400">
-              Running model inference
+              Learning from my past mistakes...
             </p>
           </div>
         )}
